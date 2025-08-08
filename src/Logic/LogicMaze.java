@@ -96,16 +96,19 @@ public class LogicMaze {
                 if (!this.isOutOfBounds(row, column - 1) && this.maze.getMatrix()[row][column - 1] != PathType.VISITED.getValue() && this.maze.getMatrix()[row][column - 1] != PathType.START.getValue()) {
                     return this.solveMaze(row, column - 1);
                 }
+                break;
             }
             case 1: {
                 if (!this.isOutOfBounds(row, column + 1) && this.maze.getMatrix()[row][column + 1] != PathType.VISITED.getValue() && this.maze.getMatrix()[row][column + 1] != PathType.START.getValue()) {
                     return this.solveMaze(row, column + 1);
                 }
+                break;
             }
             case 2: {
                 if (!this.isOutOfBounds(row + 1, column) && this.maze.getMatrix()[row + 1][column] != PathType.VISITED.getValue() && this.maze.getMatrix()[row + 1][column] != PathType.START.getValue()) {
                     return this.solveMaze(row + 1, column);
                 }
+                break;
             }
             case 3: {
                 if (this.isOutOfBounds(row - 1, column) || this.maze.getMatrix()[row - 1][column] == PathType.VISITED.getValue() || this.maze.getMatrix()[row - 1][column] == PathType.START.getValue()) break;
